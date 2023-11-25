@@ -1,0 +1,31 @@
+﻿@model Web_Kinti.Models.Rol
+
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/EstiloFormulario.css">
+</head>
+
+<body>
+    <form class="formulario" asp-controller="Admin" asp-action="Registroro" method="post">
+        <h1>Registrar Rol</h1>
+
+        <div class="container">
+
+
+            <div class="input-container">
+                <input asp-for="IdRol" class="form-control" id="formGroupExampleInput2" placeholder="Id">
+                <span asp-validation-for="IdRol" class="text-danger"></span>
+            </div>
+
+            <div class="input-container">
+                <input asp-for="Nombre" class="form-control" id="formGroupExampleInput2" placeholder="Nombre">
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+
+            <input type="submit" value="Registrar" class="button" />
+
+        </div>
+    </form>
+
+</body>
+</html>

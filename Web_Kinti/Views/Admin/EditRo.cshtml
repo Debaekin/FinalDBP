@@ -1,0 +1,31 @@
+﻿@model Web_Kinti.Models.Rol
+
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/EstiloFormulario.css">
+</head>
+
+<body>
+    <form class="formulario" asp-controller="Admin" asp-action="EditDetailsRo" method="post">
+        <h1>Editar Reserva</h1>
+
+        <div class="container">
+
+            <div class="input-container">
+                <input asp-for="IdRol" class="form-control" id="formGroupExampleInput2" placeholder="Id">
+                <span asp-validation-for="IdRol" class="text-danger"></span>
+            </div>
+
+            <div class="input-container">
+                <input asp-for="Nombre" class="form-control" id="formGroupExampleInput2" placeholder="Nombre">
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+
+            <div>
+                <button type="submit" value="btn" name="editar" class="button">Editar</button>
+            </div>
+        </div>
+    </form>
+
+</body>
+</html>

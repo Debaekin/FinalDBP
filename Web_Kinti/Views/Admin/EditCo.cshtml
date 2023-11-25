@@ -1,0 +1,54 @@
+﻿@model Web_Kinti.Models.Comidum
+
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/EstiloFormulario.css">
+</head>
+
+<body>
+    <form class="formulario" asp-controller="Admin" asp-action="EditDetailsCo" method="post">
+        <h1>Registrate</h1>
+
+        <div class="container">
+            
+            <div class="input-container">
+                <input asp-for="IdComida" class="form-control" id="formGroupExampleInput2" placeholder="ID" type="hidden">
+                <span asp-validation-for="IdComida" class="text-danger"></span>
+            </div>
+
+
+            <div class="input-container">
+                <input asp-for="CodigoBarra" class="form-control" id="formGroupExampleInput2" placeholder="Nombre">
+                <span asp-validation-for="CodigoBarra" class="text-danger"></span>
+            </div>
+
+            <div class="input-container">
+                <input asp-for="Descripcion" class="form-control" id="formGroupExampleInput2" placeholder="Descripcion">
+                <span asp-validation-for="Descripcion" class="text-danger"></span>
+            </div>
+
+            <div class="input-container">
+                <input asp-for="UrlFoto" class="form-control" id="formGroupExampleInput2" placeholder="image">
+                <span asp-validation-for="UrlFoto" class="text-danger"></span>
+            </div>
+
+            <div class="input-container">
+                <input asp-for="Precio" class="form-control" id="formGroupExampleInput2" placeholder="Precio">
+                <span asp-validation-for="Precio" class="text-danger"></span>
+            </div>
+
+            <div class="select">
+                <select asp-for="IdCategoria" asp-items='@(new SelectList(ViewBag.ListaDeCategorias, "IdCategoria", "Nombre"))' class="form-control">
+                    <option selected disabled>Categoría</option>
+                </select>
+                <span asp-validation-for="IdCategoria" class="text-danger"></span>
+            </div>
+
+            <div>
+                <button type="submit" value="btn" name="editar" class="button">Modificar</button>
+            </div>
+        </div>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+﻿@model Web_Kinti.Models.Reservacion
+
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/EstiloFormulario.css">
+</head>
+
+<body>
+    <form class="formulario" asp-controller="Admin" asp-action="EditDetailsRe" method="post">
+        <h1>Editar Reserva</h1>
+
+        <div class="container">
+            
+            <div class="input-container">
+                <input asp-for="IdReservacion" class="form-control" id="formGroupExampleInput2" placeholder="Id">
+                <span asp-validation-for="IdReservacion" class="text-danger"></span>
+            </div>
+
+            <div class="input-container">
+                <input asp-for="Fecha" class="form-control" id="formGroupExampleInput2" placeholder="Fecha">
+                <span asp-validation-for="Fecha" class="text-danger"></span>
+            </div>
+
+            <div class="select">
+                <select asp-for="IdUsuario" asp-items='@(new SelectList(ViewBag.ListaDeUsuarios, "IdUsuario", "Nombre"))' class="form-control">
+                    <option selected disabled>Usuario</option>
+                </select>
+                <span asp-validation-for="IdUsuario" class="text-danger"></span>
+            </div>
+
+            <div>
+                <button type="submit" value="btn" name="editar" class="button">Editar</button>
+            </div>
+        </div>
+    </form>
+
+</body>
+</html>

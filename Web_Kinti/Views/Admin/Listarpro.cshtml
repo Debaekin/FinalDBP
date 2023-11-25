@@ -1,0 +1,73 @@
+﻿@model IEnumerable<Web_Kinti.Models.Comidum>
+
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/AdminMenu.css" />
+
+    <link rel="stylesheet"
+          href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">KIN<span>TI</span></a>
+
+        <ul class="navbar">
+            <li><a href="listarusu">Usuarios registrados</a></li>
+            <li><a href="registrarpro">Registrar platillo</a></li>
+            <li><a href="listarre">Reservaciones</a></li>
+        </ul>
+
+        <div class="h-right">
+            <a href="#">Siguenos</a>
+            <a href="#"><i class="ri-instagram-fill"></i></a>
+            <a href="#"><i class="ri-twitter-fill"></i></a>
+            <a href="#"><i class="ri-facebook-fill"></i></a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+
+    <div class="table">
+
+        <div class="table_section">
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Codigo</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Descripcion</th>
+                        <th scope="col">Categoria</th>
+                        <th scope="col">Imagen</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.IdComida</td>
+                            <td>@item.CodigoBarra</td>
+                            <td>@item.Descripcion</td>
+                            <td>@item.IdCategoria</td>
+                            <td><img src="@item.UrlFoto"></td>
+                            <td>@item.Precio</td>
+                            <td>
+                                <a asp-action="Editco" asp-route-id="@item.IdComida">
+                                    <button class="update-button"><i class='bx bxs-edit'></i></button>
+                                </a>
+                                <a asp-action="Deleteco" asp-route-id="@item.IdComida">
+                                    <button class="delete-button"><i class='bx bxs-trash-alt'></i></button>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>

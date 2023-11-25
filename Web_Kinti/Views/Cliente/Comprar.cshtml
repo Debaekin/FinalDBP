@@ -1,0 +1,37 @@
+﻿@model Web_Kinti.Models.TemporalVenta 
+
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/StyleComprar.css">
+</head>
+    <body>
+        <form class="formulario" asp-controller="TemporalVenta" asp-action="Index" method="post">
+            <h1>Registrar Pedido</h1>
+
+            <div class="container">
+                <div class="input-container">
+                    <input asp-for="IdComida" type="text" class="form-control" value="@ViewData["codigo"]" />
+                </div>
+
+                <div class="input-container">
+                    <label for="formGroupExampleInput">Platillo</label>
+                    <input asp-for="CodigoBarra" type="text" class="form-control" placeholder="Nombre" value="@ViewData["nombre"]" />
+                </div>
+
+                <div class="input-container">
+                    <label for="formGroupExampleInput">Precio</label>
+                    <input asp-for="Precio" type="text" class="form-control" placeholder="Precio" value="@ViewData["precio"]"/>
+                </div>
+            
+                <div class="input-container">
+                    <label for="formGroupExampleInput">Cantidad</label>
+                    <input asp-for="cantidad" type="number" class="form-control" placeholder="Cantidad"/>
+                </div>
+
+                <div>
+                    <input type="submit" class="btn btn-primary" value="Agregar a la reservación" />
+                </div>
+            </div>
+        </form>
+    </body>
+</html>

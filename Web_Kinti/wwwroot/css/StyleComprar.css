@@ -1,0 +1,68 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../img/fondo-comprar3.jpg);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.formulario {
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.3); /*color del formulario*/
+    padding: 30px;
+    margin: auto;
+    margin-top: 60px;
+    border-radius: 15px;
+    font-family: Calibri;
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+}
+h1 {
+    color:#fff;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.input-container input {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8); /*color de los inputs*/
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #808080; /*color de la letra */
+    font-family: Calibri;
+    font-size: 16px;
+    color: #000;
+}
+
+.container a {
+    color: gold;
+    text-decoration: underline;
+}
+.container .btn {
+    width: 100%;
+    background: gold ; /*color boton*/
+    border:solid 2px;
+    padding: 12px;
+    color: #000;
+    margin: 16px 0;
+    font-size: 16px;
+}
+.btn:hover {
+    background: #808080;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+

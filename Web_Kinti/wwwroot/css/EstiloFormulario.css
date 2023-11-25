@@ -1,0 +1,110 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../img/fondo2.jpg);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.formulario {
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.3); /*color del formulario*/
+    padding: 30px;
+    margin: auto;
+    margin-top: 60px;
+    border-radius: 15px;
+    font-family: Calibri;
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+}
+h1 {
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-container input {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8); /*color de los inputs*/
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #808080; /*color de la letra */
+    font-family: Calibri;
+    font-size: 16px;
+    color: #000;
+}
+.container a {
+    color: gold;
+    text-decoration: underline;
+}
+
+.container .button {
+    width: 100%;
+    background: gold; /*color boton*/
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+}
+.link {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+    .link:hover {
+        color: #000;
+        text-decoration: underline;
+    }
+
+.button:hover {
+    background: #808080;
+    color: white;
+}
+
+/*combo box*/
+
+.select {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 2.5em;
+    line-height: 3;
+    background: rgba(255, 255, 255, 0.8);
+    overflow: hidden;
+    border-radius: 2px;
+}
+.select select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0!important;
+    background: transparent;
+    flex: 1;
+    padding: 0 .5em;
+    color: #808080; /* Color del texto del combo box */
+    cursor: pointer;
+    font-size: 14px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: rgba(255, 255, 255, 0.8); /* Color del botón desplegable */
+    cursor: pointer;
+    pointer-events: none;
+    transition: .25s all ease;
+}
+    .select:hover::after {
+        color: gold; /* Color del botón desplegable al pasar el ratón */
+    }

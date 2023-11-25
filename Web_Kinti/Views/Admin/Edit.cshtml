@@ -1,0 +1,66 @@
+﻿@model Web_Kinti.Models.Usuario
+
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/EstiloFormulario.css">
+</head>
+
+<body>
+    <form class="formulario" asp-controller="Admin" asp-action="EditDetails" method="post">
+        <h1>Editar Usuario</h1>
+
+        <div class="container">
+
+            <div class="input-container">
+                <input asp-for="IdUsuario" class="form-control" id="formGroupExampleInput2" placeholder="Id" type="hidden">
+                <span asp-validation-for="IdUsuario" class="text-danger"></span>
+            </div>
+
+            <div class="input-container">
+                <input asp-for="Nombre" class="form-control" id="formGroupExampleInput2" placeholder="Nombres Completos">
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+
+            <div class="input-container">
+                <input asp-for="Apellido" class="form-control" id="formGroupExampleInput2" placeholder="Apellido">
+                <span asp-validation-for="Apellido" class="text-danger"></span>
+            </div>
+
+            <div class="input-container">
+                <input asp-for="Telefono" class="form-control" id="formGroupExampleInput2" placeholder="Numero Telefonico">
+                <span asp-validation-for="Telefono" class="text-danger"></span>
+            </div>
+
+            <div class="input-container">
+                <input asp-for="UrlFoto" class="form-control" id="formGroupExampleInput2" placeholder="image">
+                <span asp-validation-for="UrlFoto" class="text-danger"></span>
+            </div>
+
+            <!--
+            <div class="input-container">
+                <input asp-for="FechaNacimiento" type="date" class="form-control" id="formGroupExampleInput2" placeholder="Fecha de Nacimiento">
+                <span asp-validation-for="FechaNacimiento" class="text-danger"></span>
+            </div>
+
+            <div class="input-container">
+                <input asp-for="Clave" type="password" class="form-control" id="formGroupExampleInput2" placeholder="Contraseña">
+                <span asp-validation-for="Clave" class="text-danger"></span>
+            </div>-->
+
+            <div class="select">
+                <select asp-for="IdRol" asp-items='@(new SelectList(ViewBag.ListaDeRols,"IdRol","Nombre"))' class="form-control">
+                    <option selected disabled>Escoge el rol</option>
+                </select>
+                <span asp-validation-for="IdRol" class="text-danger"></span>
+            </div>
+
+            <div>
+                <button type="submit" value="btn" name="editar" class="button">Modificar</button>
+            </div>
+        </div>
+    </form>
+
+
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+﻿@model Web_Kinti.Models.Usuario
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/EstiloLogin.css">
+
+    <link rel="stylesheet"
+          href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">KIN<span>TI</span></a>
+
+        <ul class="navbar">
+            <li><a href="#about">Sobre Nosotros</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+
+        <div class="h-right">
+            <a href="#">Siguenos</a>
+            <a href="#"><i class="ri-instagram-fill"></i></a>
+            <a href="#"><i class="ri-twitter-fill"></i></a>
+            <a href="#"><i class="ri-facebook-fill"></i></a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="content">
+            <h2 class="logo2"><i class='bx bx-restaurant'></i>Kinti</h2>
+
+            <div class="text-sci">
+                <h2>¡Bienvenido!<br><span>A nuestro sitio web.</span></h2>
+
+                <p>
+                    Celebremos juntos la diversidad culinaria en Kinti.
+                    Cada plato es una expresión de las ricas tradiciones culinarias que nos inspiran.
+                </p>
+
+                <div class="social-icons">
+                    <a href="#"><i class='bx bxl-tiktok'></i></a>
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="logreg-box">
+        <div class="form-box login">
+            <form asp-controller="Usuario" asp-action="Grabar" method="post">
+                <h2>Sign Up</h2>
+
+                <div class="input-box">
+                    <span class="icon"><i class='bx bxs-user-circle'></i></span>
+                    <input type="text" required>
+                    <label>Nombre</label>
+                </div>
+                <!--
+                <div class="input-box">
+                    <span class="icon"><i class='bx bxs-user-circle'></i></span>
+                    <input type="text" required>
+                    <label>Apellido</label>
+                </div>-->
+
+                <div class="input-box">
+                    <span class="icon"><i class='bx bxs-phone-call'></i></span>
+                    <input type="tel" required>
+                    <label>Teléfono</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon"><i class='bx bxs-face'></i></span>
+                    <input type="text" required>
+                    <label>Foto de perfil</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon"><i class='bx bxs-lock-alt'></i></span>
+                    <input type="text" required>
+                    <label>Password</label>
+                </div>
+
+                <button type="submit" class="btn">Unirse</button>
+
+
+                <div class="login-register">
+                    <p>¿Ya tienes una cuenta? <a href="/Usuario/Index" class="register-link">Iniciar sesión</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

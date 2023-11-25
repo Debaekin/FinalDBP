@@ -1,0 +1,62 @@
+﻿@model IEnumerable<Web_Kinti.Models.Comidum>
+
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/StyleMenu.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet"
+          href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">KIN<span>TI</span></a>
+
+        <ul class="navbar">
+            <li><a href="#about">Sobre Nosotros</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a asp-area="" asp-controller="TemporalVenta" asp-action="VerCarrito">Ver Reservación 🛒</a></li>
+
+        </ul>
+
+        <div class="h-right">
+            <a href="#">Siguenos</a>
+            <a href="#"><i class="ri-instagram-fill"></i></a>
+            <a href="#"><i class="ri-twitter-fill"></i></a>
+            <a href="#"><i class="ri-facebook-fill"></i></a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+
+    
+    <div class="container">
+
+        <h3 class="title"> Nuestra Carta </h3>
+
+        <div class="products-container">
+            @foreach (var item in Model)
+            {
+                <div class="product" data-name="@item.CodigoBarra">
+                    <img src="@item.UrlFoto" alt="">
+                    <h3>@item.CodigoBarra</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>( 250 )</span>
+                    </div>
+                    <p>@item.Descripcion</p>
+                    <div class="price">S/.@item.Precio</div>
+                    <div class="buttons">
+                        <a asp-action="Comprar" asp-route-id="@item.IdComida" class="btn">Comprar</a>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+</body>
+</html>
